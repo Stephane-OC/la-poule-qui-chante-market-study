@@ -1,0 +1,33 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.egg-info/
+.env
+
+# --- Environnement virtuel ---
+venv/
+ENV/
+env/
+.venv/
+
+# --- Jupyter ---
+.ipynb_checkpoints
+*.ipynb_convert
+
+# --- VSCode ---
+.vscode/
+.history/
+*.code-workspace
+
+# --- Données volumineuses ou temporaires ---
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
