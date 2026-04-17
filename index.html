@@ -8090,6 +8090,77 @@ Le dataset produit ici sera ensuite utilisé dans un second notebook dédié à 
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f43b543a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Importation des librairies principales</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">"ignore"</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">UserWarning</span><span class="p">,</span> <span class="n">module</span><span class="o">=</span><span class="s2">"openpyxl"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"✅ Librairies importées avec succès."</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>✅ Librairies importées avec succès.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=01849820">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Configuration de l'affichage pandas</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">"display.max_columns"</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">"display.max_rows"</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">"display.max_colwidth"</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"✅ Options d'affichage pandas configurées."</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>✅ Options d'affichage pandas configurées.
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=777de3bf">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -8129,6 +8200,629 @@ Le dataset produit ici sera ensuite utilisé dans un second notebook dédié à 
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1bb89b46">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Chargement des fichiers CSV</span>
+<span class="n">dispo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="s2">"data/DisponibiliteAlimentaire_2017.csv"</span><span class="p">,</span>
+    <span class="n">sep</span><span class="o">=</span><span class="s2">","</span>
+<span class="p">)</span>
+
+<span class="n">population</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="s2">"data/Population_2000_2018.csv"</span><span class="p">,</span>
+    <span class="n">sep</span><span class="o">=</span><span class="s2">","</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"✅ Fichiers chargés avec succès."</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>✅ Fichiers chargés avec succès.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=673c4b4e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Dimensions des datasets</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Dimensions du fichier Disponibilité alimentaire :"</span><span class="p">,</span> <span class="n">dispo</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Dimensions du fichier Population :"</span><span class="p">,</span> <span class="n">population</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Dimensions du fichier Disponibilité alimentaire : (176600, 14)
+Dimensions du fichier Population : (4411, 15)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=fbe68acd">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Aperçu des premières lignes du fichier disponibilité alimentaire</span>
+<span class="n">dispo</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Code Domaine</th>
+<th>Domaine</th>
+<th>Code zone</th>
+<th>Zone</th>
+<th>Code Élément</th>
+<th>Élément</th>
+<th>Code Produit</th>
+<th>Produit</th>
+<th>Code année</th>
+<th>Année</th>
+<th>Unité</th>
+<th>Valeur</th>
+<th>Symbole</th>
+<th>Description du Symbole</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5511</td>
+<td>Production</td>
+<td>2511</td>
+<td>Blé et produits</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>4281.0</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+<tr>
+<th>1</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5611</td>
+<td>Importations - Quantité</td>
+<td>2511</td>
+<td>Blé et produits</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>2302.0</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+<tr>
+<th>2</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5072</td>
+<td>Variation de stock</td>
+<td>2511</td>
+<td>Blé et produits</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>-119.0</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+<tr>
+<th>3</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5911</td>
+<td>Exportations - Quantité</td>
+<td>2511</td>
+<td>Blé et produits</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>0.0</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+<tr>
+<th>4</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5301</td>
+<td>Disponibilité intérieure</td>
+<td>2511</td>
+<td>Blé et produits</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>6701.0</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a7561d7e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Aperçu des premières lignes du fichier population</span>
+
+<span class="n">population</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Code Domaine</th>
+<th>Domaine</th>
+<th>Code zone</th>
+<th>Zone</th>
+<th>Code Élément</th>
+<th>Élément</th>
+<th>Code Produit</th>
+<th>Produit</th>
+<th>Code année</th>
+<th>Année</th>
+<th>Unité</th>
+<th>Valeur</th>
+<th>Symbole</th>
+<th>Description du Symbole</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>OA</td>
+<td>Séries temporelles annuelles</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>511</td>
+<td>Population totale</td>
+<td>3010</td>
+<td>Population-Estimations</td>
+<td>2000</td>
+<td>2000</td>
+<td>1000 personnes</td>
+<td>20779.953</td>
+<td>X</td>
+<td>Sources internationales sûres</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1</th>
+<td>OA</td>
+<td>Séries temporelles annuelles</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>511</td>
+<td>Population totale</td>
+<td>3010</td>
+<td>Population-Estimations</td>
+<td>2001</td>
+<td>2001</td>
+<td>1000 personnes</td>
+<td>21606.988</td>
+<td>X</td>
+<td>Sources internationales sûres</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>2</th>
+<td>OA</td>
+<td>Séries temporelles annuelles</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>511</td>
+<td>Population totale</td>
+<td>3010</td>
+<td>Population-Estimations</td>
+<td>2002</td>
+<td>2002</td>
+<td>1000 personnes</td>
+<td>22600.770</td>
+<td>X</td>
+<td>Sources internationales sûres</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3</th>
+<td>OA</td>
+<td>Séries temporelles annuelles</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>511</td>
+<td>Population totale</td>
+<td>3010</td>
+<td>Population-Estimations</td>
+<td>2003</td>
+<td>2003</td>
+<td>1000 personnes</td>
+<td>23680.871</td>
+<td>X</td>
+<td>Sources internationales sûres</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>4</th>
+<td>OA</td>
+<td>Séries temporelles annuelles</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>511</td>
+<td>Population totale</td>
+<td>3010</td>
+<td>Population-Estimations</td>
+<td>2004</td>
+<td>2004</td>
+<td>1000 personnes</td>
+<td>24726.684</td>
+<td>X</td>
+<td>Sources internationales sûres</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=df6c56ce">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Informations générales sur le fichier disponibilité alimentaire</span>
+<span class="n">dispo</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;class 'pandas.DataFrame'&gt;
+RangeIndex: 176600 entries, 0 to 176599
+Data columns (total 14 columns):
+ #   Column                  Non-Null Count   Dtype  
+---  ------                  --------------   -----  
+ 0   Code Domaine            176600 non-null  str    
+ 1   Domaine                 176600 non-null  str    
+ 2   Code zone               176600 non-null  int64  
+ 3   Zone                    176600 non-null  str    
+ 4   Code Élément            176600 non-null  int64  
+ 5   Élément                 176600 non-null  str    
+ 6   Code Produit            176600 non-null  int64  
+ 7   Produit                 176600 non-null  str    
+ 8   Code année              176600 non-null  int64  
+ 9   Année                   176600 non-null  int64  
+ 10  Unité                   176600 non-null  str    
+ 11  Valeur                  176600 non-null  float64
+ 12  Symbole                 176600 non-null  str    
+ 13  Description du Symbole  176600 non-null  str    
+dtypes: float64(1), int64(5), str(8)
+memory usage: 18.9 MB
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f09c1a88">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Informations générales sur le fichier population</span>
+<span class="n">population</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;class 'pandas.DataFrame'&gt;
+RangeIndex: 4411 entries, 0 to 4410
+Data columns (total 15 columns):
+ #   Column                  Non-Null Count  Dtype  
+---  ------                  --------------  -----  
+ 0   Code Domaine            4411 non-null   str    
+ 1   Domaine                 4411 non-null   str    
+ 2   Code zone               4411 non-null   int64  
+ 3   Zone                    4411 non-null   str    
+ 4   Code Élément            4411 non-null   int64  
+ 5   Élément                 4411 non-null   str    
+ 6   Code Produit            4411 non-null   int64  
+ 7   Produit                 4411 non-null   str    
+ 8   Code année              4411 non-null   int64  
+ 9   Année                   4411 non-null   int64  
+ 10  Unité                   4411 non-null   str    
+ 11  Valeur                  4411 non-null   float64
+ 12  Symbole                 4411 non-null   str    
+ 13  Description du Symbole  4411 non-null   str    
+ 14  Note                    258 non-null    str    
+dtypes: float64(1), int64(5), str(9)
+memory usage: 517.0 KB
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5d88f78c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Vérification des valeurs manquantes dans les fichiers sources</span>
+<span class="n">missing_dispo</span> <span class="o">=</span> <span class="n">dispo</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">missing_population</span> <span class="o">=</span> <span class="n">population</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">"&lt;h3 style='color:#C084FC;'&gt;Valeurs manquantes — Disponibilité alimentaire&lt;/h3&gt;"</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">missing_dispo</span><span class="p">[</span><span class="n">missing_dispo</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">])</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">"&lt;h3 style='color:#C084FC;'&gt;Valeurs manquantes — Population&lt;/h3&gt;"</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">missing_population</span><span class="p">[</span><span class="n">missing_population</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<h3 style="color:#C084FC;">Valeurs manquantes — Disponibilité alimentaire</h3>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Series([], dtype: int64)</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<h3 style="color:#C084FC;">Valeurs manquantes — Population</h3>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Note    4153
+dtype: int64</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5a95565a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="
+  font-family:Segoe UI, Arial, sans-serif;
+  font-size:16px;
+  color:#f4f4f5;
+  background:linear-gradient(135deg, rgba(31,14,54,0.96), rgba(18,18,24,0.98));
+  padding:18px 22px;
+  border-radius:14px;
+  border:1px solid rgba(196,132,252,0.35);
+  width:min(980px, 95%);
+  margin:22px auto;
+  box-shadow:0 0 22px rgba(0,0,0,0.45);
+  line-height:1.6;
+">
+<div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+<span style="font-size:20px;">📂</span>
+<b style="font-size:19px; color:#E9C7FF;">Étape 1.2 — Chargement des données FAO</b>
+</div>
+<p style="margin:0 0 12px 0;">
+    Deux fichiers sources ont été importés afin de construire la base de travail du projet :
+    un fichier de <b style="color:#D8B4FE;">disponibilité alimentaire</b> et un fichier de
+    <b style="color:#D8B4FE;">population</b>.
+  </p>
+<div style="
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:12px;
+    margin:14px 0;
+  ">
+<div style="
+      padding:12px 2px;
+      border-radius:12px;
+      background:rgba(168,85,247,0.08);
+      border:1px solid rgba(168,85,247,0.28);
+    ">
+<div style="font-weight:700; color:#E9C7FF; margin-bottom:6px;">🍗 Disponibilité alimentaire</div>
+<ul style="margin:0; padding-left:18px;">
+<li><b>176 600</b> lignes</li>
+<li><b>14</b> colonnes</li>
+<li>Données alimentaires par pays, produit et indicateur</li>
+</ul>
+</div>
+<div style="
+      padding:12px 2px;
+      border-radius:12px;
+      background:rgba(56,189,248,0.08);
+      border:1px solid rgba(56,189,248,0.28);
+    ">
+<div style="font-weight:700; color:#BFE9FF; margin-bottom:6px;">🌍 Population</div>
+<ul style="margin:0; padding-left:18px;">
+<li><b>4 411</b> lignes</li>
+<li><b>15</b> colonnes</li>
+<li>Données de population par pays et par année</li>
+</ul>
+</div>
+</div>
+<div style="
+    margin-top:14px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(34,197,94,0.08);
+    border:1px solid rgba(34,197,94,0.28);
+  ">
+    ✅ <b style="color:#86EFAC;">Contrôle du chargement :</b><br/>
+    Les deux fichiers ont été chargés correctement. Les premières lignes confirment que les données contiennent
+    les colonnes attendues, notamment <b>Zone</b>, <b>Produit</b>, <b>Élément</b>, <b>Année</b>, <b>Unité</b> et <b>Valeur</b>.
+  </div>
+<div style="
+    margin-top:14px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(250,204,21,0.08);
+    border:1px solid rgba(250,204,21,0.30);
+  ">
+    🔎 <b style="color:#FDE68A;">Lecture initiale :</b><br/>
+    Le fichier de disponibilité alimentaire ne présente pas de valeurs manquantes visibles sur les colonnes utiles.
+    Dans le fichier population, la colonne <b>Note</b> contient des valeurs manquantes, mais cette colonne est descriptive
+    et ne sera pas utilisée pour l’analyse.
+  </div>
+<div style="
+    margin-top:14px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(236,72,153,0.08);
+    border:1px solid rgba(236,72,153,0.26);
+  ">
+    👉 <b style="color:#F9A8D4;">En clair :</b><br/>
+    Les fichiers sources sont exploitables pour démarrer l’étude. La prochaine étape consiste à comprendre leur structure,
+    identifier les indicateurs disponibles et sélectionner les variables pertinentes pour une stratégie d’exportation de volaille.
+  </div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2bcdc51c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -8164,9 +8858,109 @@ Le dataset produit ici sera ensuite utilisé dans un second notebook dédié à 
 </a>
 <span>1.3 • Rappel de la problématique métier</span>
 </h3>
-</div>4
-
-
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d65da9d0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="
+  font-family:Segoe UI, Arial, sans-serif;
+  font-size:16px;
+  color:#f4f4f5;
+  background:linear-gradient(135deg, rgba(53,18,72,0.96), rgba(20,18,28,0.98));
+  padding:18px 22px;
+  border-radius:14px;
+  border:1px solid rgba(236,72,153,0.32);
+  width:min(980px, 95%);
+  margin:22px auto;
+  box-shadow:0 0 22px rgba(0,0,0,0.45);
+  line-height:1.6;
+">
+<div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+<span style="font-size:21px;">🐔</span>
+<b style="font-size:19px; color:#F9A8D4;">Étape 1.3 — Rappel de la problématique métier</b>
+</div>
+<p style="margin:0 0 12px 0;">
+    L’entreprise fictive <b style="color:#FDE68A;">La poule qui chante</b> souhaite développer son activité
+    à l’international. L’objectif n’est pas encore de réaliser une étude de marché détaillée pays par pays,
+    mais d’identifier des <b style="color:#F9A8D4;">groupes de pays prometteurs</b> pour l’exportation de poulets.
+  </p>
+<div style="
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:12px;
+    margin:14px 0;
+  ">
+<div style="
+      padding:12px 2px;
+      border-radius:12px;
+      background:rgba(236,72,153,0.08);
+      border:1px solid rgba(236,72,153,0.28);
+    ">
+<div style="font-weight:700; color:#F9A8D4; margin-bottom:6px;">🎯 Objectif business</div>
+<p style="margin:0;">
+        Repérer les pays ou groupes de pays qui présentent un potentiel intéressant pour une future stratégie
+        d’exportation de volaille.
+      </p>
+</div>
+<div style="
+      padding:12px 2px;
+      border-radius:12px;
+      background:rgba(56,189,248,0.08);
+      border:1px solid rgba(56,189,248,0.28);
+    ">
+<div style="font-weight:700; color:#BFE9FF; margin-bottom:6px;">📊 Approche data</div>
+<p style="margin:0;">
+        Construire un dataset pays à partir d’indicateurs alimentaires, démographiques et commerciaux issus
+        principalement des données FAO.
+      </p>
+</div>
+<div style="
+      padding:12px 2px;
+      border-radius:12px;
+      background:rgba(34,197,94,0.08);
+      border:1px solid rgba(34,197,94,0.28);
+    ">
+<div style="font-weight:700; color:#86EFAC; margin-bottom:6px;">🌍 Finalité stratégique</div>
+<p style="margin:0;">
+        Préparer une segmentation des pays afin d’aider le COMEX à prioriser les marchés à étudier plus en détail.
+      </p>
+</div>
+</div>
+<div style="
+    margin-top:14px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(250,204,21,0.08);
+    border:1px solid rgba(250,204,21,0.30);
+  ">
+    🧭 <b style="color:#FDE68A;">Démarche retenue :</b>
+<ul style="margin:8px 0 0 0; padding-left:20px;">
+<li>analyser les fichiers sources disponibles ;</li>
+<li>sélectionner au moins <b>8 variables pertinentes</b> pour la problématique ;</li>
+<li>nettoyer les données et retirer les pays peu exploitables ou aberrants ;</li>
+<li>créer des variables dérivées utiles à l’analyse ;</li>
+<li>exporter un dataset final propre pour l’ACP et le clustering.</li>
+</ul>
+</div>
+<div style="
+    margin-top:14px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(168,85,247,0.08);
+    border:1px solid rgba(168,85,247,0.28);
+  ">
+    👉 <b style="color:#D8B4FE;">En clair :</b><br/>
+    Ce premier notebook sert à construire une base fiable et cohérente. Le second notebook utilisera ensuite ce dataset
+    pour réaliser l’ACP, le clustering et les recommandations de pays à prioriser.
+  </div>
+</div>
 </div>
 </div>
 </div>
@@ -8249,6 +9043,425 @@ Le dataset produit ici sera ensuite utilisé dans un second notebook dédié à 
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=60a255bd">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Liste des colonnes du fichier disponibilité alimentaire</span>
+<span class="n">dispo</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>Index(['Code Domaine', 'Domaine', 'Code zone', 'Zone', 'Code Élément',
+       'Élément', 'Code Produit', 'Produit', 'Code année', 'Année', 'Unité',
+       'Valeur', 'Symbole', 'Description du Symbole'],
+      dtype='str')</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6d499f24">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Liste des colonnes du fichier population</span>
+<span class="n">population</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>Index(['Code Domaine', 'Domaine', 'Code zone', 'Zone', 'Code Élément',
+       'Élément', 'Code Produit', 'Produit', 'Code année', 'Année', 'Unité',
+       'Valeur', 'Symbole', 'Description du Symbole', 'Note'],
+      dtype='str')</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e625a8bb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Nombre de pays présents dans chaque fichier</span>
+<span class="n">nb_pays_dispo</span> <span class="o">=</span> <span class="n">dispo</span><span class="p">[</span><span class="s2">"Zone"</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+<span class="n">nb_pays_population</span> <span class="o">=</span> <span class="n">population</span><span class="p">[</span><span class="s2">"Zone"</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Nombre de pays dans le fichier disponibilité alimentaire : </span><span class="si">{</span><span class="n">nb_pays_dispo</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Nombre de pays dans le fichier population : </span><span class="si">{</span><span class="n">nb_pays_population</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Nombre de pays dans le fichier disponibilité alimentaire : 174
+Nombre de pays dans le fichier population : 238
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a94ea7a0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Modalités disponibles dans la colonne Élément</span>
+<span class="n">dispo</span><span class="p">[</span><span class="s2">"Élément"</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;StringArray&gt;
+[                                                   'Production',
+                                       'Importations - Quantité',
+                                            'Variation de stock',
+                                       'Exportations - Quantité',
+                                      'Disponibilité intérieure',
+                                         'Aliments pour animaux',
+                                                      'Semences',
+                                                        'Pertes',
+                                                       'Résidus',
+                                                    'Nourriture',
+        'Disponibilité alimentaire en quantité (kg/personne/an)',
+                'Disponibilité alimentaire (Kcal/personne/jour)',
+      'Disponibilité de protéines en quantité (g/personne/jour)',
+ 'Disponibilité de matière grasse en quantité (g/personne/jour)',
+                                                    'Traitement',
+                         'Autres utilisations (non alimentaire)',
+                                   'Alimentation pour touristes']
+Length: 17, dtype: str</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=868d2795">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Modalités disponibles dans la colonne Produit</span>
+
+<span class="n">dispo</span><span class="p">[</span><span class="s2">"Produit"</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;StringArray&gt;
+[                'Blé et produits',                 'Riz et produits',
+                'Orge et produits',                'Maïs et produits',
+              'Seigle et produits',                          'Avoine',
+              'Millet et produits',              'Sorgho et produits',
+                'Céréales, Autres',     'Pommes de Terre et produits',
+                         'Ignames',                     'Racines nda',
+                    'Sucre, canne',                'Sucre, betterave',
+                   'Sucre Eq Brut',              'Edulcorants Autres',
+                            'Miel',                        'Haricots',
+                            'Pois', 'Légumineuses Autres et produits',
+                'Noix et produits',                            'Soja',
+          'Arachides Decortiquees',            'Graines de tournesol',
+          'Graines Colza/Moutarde',                'Graines de coton',
+              'Coco (Incl Coprah)',                          'Sésame',
+                          'Olives',        'Plantes Oleiferes, Autre',
+                   'Huile de Soja',                'Huile d'Arachide',
+              'Huile de Tournesol',         'Huile de Colza&amp;Moutarde',
+          'Huile Graines de Coton',              'Huile de Palmistes',
+                  'Huile de Palme',                   'Huile de Coco',
+                 'Huile de Sésame',                   'Huile d'Olive',
+             'Huile de Son de Riz',          'Huile de Germe de Maïs',
+         'Huil Plantes Oleif Autr',             'Tomates et produits',
+                         'Oignons',                 'Légumes, Autres',
+             'Oranges, Mandarines',     'Citrons &amp; Limes et produits',
+        'Pamplemousse et produits',                 'Agrumes, Autres',
+                         'Bananes',              'Pommes et produits',
+              'Ananas et produits',                          'Dattes',
+                          'Raisin',                  'Fruits, Autres',
+                'Café et produits',       'Feve de Cacao et produits',
+                             'Thé',                          'Poivre',
+                         'Piments',                        'Girofles',
+                  'Épices, Autres',                             'Vin',
+                           'Bière',              'Boissons Fermentés',
+            'Boissons Alcooliques',          'Alcool, non Comestible',
+                'Viande de Bovins',          'Viande d'Ovins/Caprins',
+                'Viande de Suides',             'Viande de Volailles',
+                   'Viande, Autre',                'Abats Comestible',
+                    'Beurre, Ghee',                           'Crème',
+          'Graisses Animales Crue',                           'Oeufs',
+              'Lait - Excl Beurre',              'Poissons Eau Douce',
+           'Aliments pour enfants',                    'Miscellanees',
+              'Manioc et produits',                  'Patates douces',
+                       'Palmistes',               'Bananes plantains',
+              'Huiles de Poissons',        'Huiles de Foie de Poisso',
+                       'Perciform',             'Poissons Pelagiques',
+         'Poissons Marins, Autres',                       'Crustacés',
+                    'Cephalopodes',              'Mollusques, Autres',
+        'Animaux Aquatiques Autre',              'Plantes Aquatiques',
+            'Sucre non centrifugé',          'Viande de Anim Aquatiq']
+Length: 98, dtype: str</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a70c4475">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Nombre d'occurrences par élément</span>
+<span class="n">dispo</span><span class="p">[</span><span class="s2">"Élément"</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>Élément
+Disponibilité intérieure                                         15905
+Importations - Quantité                                          15260
+Disponibilité alimentaire en quantité (kg/personne/an)           14618
+Disponibilité de matière grasse en quantité (g/personne/jour)    14512
+Disponibilité de protéines en quantité (g/personne/jour)         14507
+Nourriture                                                       14498
+Disponibilité alimentaire (Kcal/personne/jour)                   14476
+Résidus                                                          12567
+Exportations - Quantité                                          12113
+Variation de stock                                               11299
+Production                                                       10334
+Pertes                                                            5813
+Alimentation pour touristes                                       5560
+Autres utilisations (non alimentaire)                             5292
+Aliments pour animaux                                             4188
+Traitement                                                        3546
+Semences                                                          2112
+Name: count, dtype: int64</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=93a71272">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Nombre d'occurrences par produit</span>
+<span class="n">dispo</span><span class="p">[</span><span class="s2">"Produit"</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>Produit
+Maïs et produits                   2593
+Blé et produits                    2581
+Pommes de Terre et produits        2486
+Riz et produits                    2452
+Lait - Excl Beurre                 2395
+Oeufs                              2347
+Légumineuses Autres et produits    2336
+Orge et produits                   2301
+Soja                               2222
+Céréales, Autres                   2206
+Légumes, Autres                    2204
+Fruits, Autres                     2198
+Arachides Decortiquees             2197
+Edulcorants Autres                 2194
+Haricots                           2141
+Sucre Eq Brut                      2137
+Graisses Animales Crue             2137
+Feve de Cacao et produits          2088
+Huil Plantes Oleif Autr            2083
+Plantes Oleiferes, Autre           2077
+Viande de Bovins                   2065
+Viande de Volailles                2061
+Avoine                             2060
+Coco (Incl Coprah)                 2051
+Tomates et produits                2046
+Raisin                             2035
+Graines Colza/Moutarde             2028
+Oranges, Mandarines                2027
+Viande de Suides                   2009
+Pommes et produits                 2005
+Name: count, dtype: int64</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=de2713c0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="
+  font-family:Segoe UI, Arial, sans-serif;
+  font-size:16px;
+  color:#f4f4f5;
+  background:linear-gradient(135deg, rgba(7,55,92,0.96), rgba(18,18,24,0.98));
+  padding:18px 22px;
+  border-radius:14px;
+  border:1px solid rgba(56,189,248,0.35);
+  width:min(980px, 95%);
+  margin:22px auto;
+  box-shadow:0 0 22px rgba(0,0,0,0.45);
+  line-height:1.6;
+">
+<div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+<span style="font-size:20px;">🔎</span>
+<b style="font-size:19px; color:#BFE9FF;">Étape 2.1 — Lecture de la structure des fichiers</b>
+</div>
+<p style="margin:0 0 12px 0;">
+    Cette étape permet de comprendre la structure des deux fichiers sources avant de sélectionner les variables utiles.
+    Les fichiers disposent d’une organisation similaire : chaque ligne correspond à une combinaison
+    <b style="color:#7DD3FC;">pays / produit / indicateur / année</b>.
+  </p>
+<div style="
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:12px;
+    margin:14px 0;
+  ">
+<div style="
+      padding:12px 2px;
+      border-radius:12px;
+      background:rgba(56,189,248,0.08);
+      border:1px solid rgba(56,189,248,0.28);
+    ">
+<div style="font-weight:700; color:#BFE9FF; margin-bottom:6px;">🍗 Fichier disponibilité alimentaire</div>
+<ul style="margin:0; padding-left:18px;">
+<li><b>174</b> pays identifiés</li>
+<li><b>17</b> types d’indicateurs disponibles</li>
+<li><b>98</b> produits alimentaires différents</li>
+</ul>
+</div>
+<div style="
+      padding:12px 2px;
+      border-radius:12px;
+      background:rgba(168,85,247,0.08);
+      border:1px solid rgba(168,85,247,0.28);
+    ">
+<div style="font-weight:700; color:#E9C7FF; margin-bottom:6px;">🌍 Fichier population</div>
+<ul style="margin:0; padding-left:18px;">
+<li><b>238</b> pays ou zones identifiés</li>
+<li>Données disponibles sur plusieurs années</li>
+<li>Unité exprimée en <b>1000 personnes</b></li>
+</ul>
+</div>
+</div>
+<div style="
+    margin-top:14px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(34,197,94,0.08);
+    border:1px solid rgba(34,197,94,0.28);
+  ">
+    ✅ <b style="color:#86EFAC;">Constat principal :</b><br/>
+    Les deux fichiers contiennent une colonne <b>Zone</b>, ce qui permettra de les rapprocher par pays.
+    Le fichier de disponibilité alimentaire contient également les colonnes <b>Produit</b> et <b>Élément</b>,
+    indispensables pour filtrer les données liées à la volaille.
+  </div>
+<div style="
+    margin-top:14px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(250,204,21,0.08);
+    border:1px solid rgba(250,204,21,0.30);
+  ">
+    📌 <b style="color:#FDE68A;">Point d’attention :</b><br/>
+    Le nombre de pays est différent entre les deux fichiers. Il faudra donc vérifier, lors de la construction du dataset final,
+    quels pays sont présents dans les deux sources et supprimer ceux pour lesquels les informations utiles sont incomplètes.
+  </div>
+<div style="
+    margin-top:14px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(56,189,248,0.08);
+    border:1px solid rgba(56,189,248,0.26);
+  ">
+    👉 <b style="color:#BFE9FF;">En clair :</b><br/>
+    Les données sont bien structurées pour construire une base d’analyse par pays. La suite consiste à identifier
+    les produits liés à la volaille et les indicateurs les plus pertinents pour répondre à la problématique d’exportation.
+  </div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=07224312">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -8284,6 +9497,82 @@ Le dataset produit ici sera ensuite utilisé dans un second notebook dédié à 
 </a>
 <span>2.2 • Réflexion PESTEL appliquée au projet</span>
 </h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=902150fb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="
+  font-family:Segoe UI, Arial, sans-serif;
+  font-size:16px;
+  color:#f4f4f5;
+  background:linear-gradient(135deg, rgba(7,55,92,0.96), rgba(18,18,24,0.98));
+  padding:18px 22px;
+  border-radius:14px;
+  border:1px solid rgba(56,189,248,0.35);
+  width:min(980px, 95%);
+  margin:22px auto;
+  box-shadow:0 0 22px rgba(0,0,0,0.45);
+  line-height:1.6;
+">
+<div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+<span style="font-size:20px;">🌐</span>
+<b style="font-size:19px; color:#BFE9FF;">Étape 2.2 — Réflexion PESTEL appliquée au projet</b>
+</div>
+<p style="margin:0 0 14px 0;">
+    Avant de sélectionner les variables, une réflexion PESTEL permet de cadrer les dimensions utiles à une stratégie
+    d’exportation. Toutes les dimensions ne sont pas directement mesurables avec les fichiers FAO, mais elles permettent
+    de justifier les indicateurs retenus.
+  </p>
+<div style="
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:12px;
+    margin:14px 0;
+  ">
+<div style="padding:12px 2px; border-radius:12px; background:rgba(236,72,153,0.08); border:1px solid rgba(236,72,153,0.28);">
+<div style="font-weight:700; color:#F9A8D4; margin-bottom:6px;">🏛️ Politique</div>
+<p style="margin:0;">La stabilité politique, les réglementations sanitaires et les barrières douanières peuvent influencer la capacité d’une entreprise à exporter.</p>
+</div>
+<div style="padding:12px 2px; border-radius:12px; background:rgba(250,204,21,0.08); border:1px solid rgba(250,204,21,0.28);">
+<div style="font-weight:700; color:#FDE68A; margin-bottom:6px;">💰 Économique</div>
+<p style="margin:0;">Le niveau d’importation, la production locale et la dépendance aux importations permettent d’évaluer l’attractivité d’un marché.</p>
+</div>
+<div style="padding:12px 2px; border-radius:12px; background:rgba(34,197,94,0.08); border:1px solid rgba(34,197,94,0.28);">
+<div style="font-weight:700; color:#86EFAC; margin-bottom:6px;">👥 Sociodémographique</div>
+<p style="margin:0;">La taille de la population et les habitudes alimentaires permettent d’estimer le potentiel de demande.</p>
+</div>
+<div style="padding:12px 2px; border-radius:12px; background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.28);">
+<div style="font-weight:700; color:#BFE9FF; margin-bottom:6px;">🚚 Technologique</div>
+<p style="margin:0;">La logistique, la distribution et la chaîne du froid peuvent influencer la faisabilité d’une stratégie d’exportation.</p>
+</div>
+<div style="padding:12px 2px; border-radius:12px; background:rgba(132,204,22,0.08); border:1px solid rgba(132,204,22,0.28);">
+<div style="font-weight:700; color:#BEF264; margin-bottom:6px;">🌱 Environnemental</div>
+<p style="margin:0;">La capacité de production locale, les contraintes climatiques et les ressources disponibles peuvent influencer le besoin d’importation.</p>
+</div>
+<div style="padding:12px 2px; border-radius:12px; background:rgba(168,85,247,0.08); border:1px solid rgba(168,85,247,0.28);">
+<div style="font-weight:700; color:#E9C7FF; margin-bottom:6px;">⚖️ Légal</div>
+<p style="margin:0;">Les normes sanitaires, les accords commerciaux et les règles d’importation peuvent impacter la faisabilité de l’exportation.</p>
+</div>
+</div>
+<div style="
+    margin-top:14px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(56,189,248,0.08);
+    border:1px solid rgba(56,189,248,0.28);
+  ">
+    👉 <b style="color:#BFE9FF;">En clair :</b><br/>
+    Dans ce notebook, l’analyse se concentre surtout sur les dimensions <b>alimentaires</b>,
+    <b>économiques</b> et <b>démographiques</b>, car ce sont celles qui sont directement exploitables
+    à partir des données disponibles.
+  </div>
 </div>
 </div>
 </div>
@@ -8327,6 +9616,381 @@ Le dataset produit ici sera ensuite utilisé dans un second notebook dédié à 
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a0221c00">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Liste des indicateurs disponibles dans les données FAO</span>
+<span class="n">elements_disponibles</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">dispo</span><span class="p">[</span><span class="s2">"Élément"</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">elements_disponibles</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Alimentation pour touristes
+Aliments pour animaux
+Autres utilisations (non alimentaire)
+Disponibilité alimentaire (Kcal/personne/jour)
+Disponibilité alimentaire en quantité (kg/personne/an)
+Disponibilité de matière grasse en quantité (g/personne/jour)
+Disponibilité de protéines en quantité (g/personne/jour)
+Disponibilité intérieure
+Exportations - Quantité
+Importations - Quantité
+Nourriture
+Pertes
+Production
+Résidus
+Semences
+Traitement
+Variation de stock
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=67328f1b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Identification des produits liés à la volaille</span>
+<span class="n">produits_volaille</span> <span class="o">=</span> <span class="n">dispo</span><span class="p">[</span>
+    <span class="n">dispo</span><span class="p">[</span><span class="s2">"Produit"</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">"volaille|poulet|viande de volailles"</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">na</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="p">][</span><span class="s2">"Produit"</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+
+<span class="n">produits_volaille</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;StringArray&gt;
+['Viande de Volailles']
+Length: 1, dtype: str</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=45e6eaf9">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Filtrage des données liées à la viande de volailles</span>
+<span class="n">volaille</span> <span class="o">=</span> <span class="n">dispo</span><span class="p">[</span><span class="n">dispo</span><span class="p">[</span><span class="s2">"Produit"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"Viande de Volailles"</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Dimensions du sous-ensemble volaille :"</span><span class="p">,</span> <span class="n">volaille</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">volaille</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Dimensions du sous-ensemble volaille : (2061, 14)
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Code Domaine</th>
+<th>Domaine</th>
+<th>Code zone</th>
+<th>Zone</th>
+<th>Code Élément</th>
+<th>Élément</th>
+<th>Code Produit</th>
+<th>Produit</th>
+<th>Code année</th>
+<th>Année</th>
+<th>Unité</th>
+<th>Valeur</th>
+<th>Symbole</th>
+<th>Description du Symbole</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>651</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5511</td>
+<td>Production</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>28.0</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+<tr>
+<th>652</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5611</td>
+<td>Importations - Quantité</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>29.0</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+<tr>
+<th>653</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5072</td>
+<td>Variation de stock</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>0.0</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+<tr>
+<th>654</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5301</td>
+<td>Disponibilité intérieure</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>57.0</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+<tr>
+<th>655</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5123</td>
+<td>Pertes</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>2.0</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ab533765">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Indicateurs disponibles pour la viande de volailles</span>
+<span class="n">volaille</span><span class="p">[</span><span class="s2">"Élément"</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>Élément
+Disponibilité alimentaire en quantité (kg/personne/an)           172
+Disponibilité alimentaire (Kcal/personne/jour)                   172
+Disponibilité de protéines en quantité (g/personne/jour)         172
+Disponibilité de matière grasse en quantité (g/personne/jour)    172
+Importations - Quantité                                          170
+Disponibilité intérieure                                         170
+Nourriture                                                       170
+Variation de stock                                               169
+Production                                                       168
+Résidus                                                          164
+Exportations - Quantité                                          135
+Alimentation pour touristes                                       78
+Pertes                                                            67
+Traitement                                                        46
+Autres utilisations (non alimentaire)                             34
+Aliments pour animaux                                              1
+Semences                                                           1
+Name: count, dtype: int64</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bcaf5e0e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="
+  font-family:Segoe UI, Arial, sans-serif;
+  font-size:16px;
+  color:#f4f4f5;
+  background:linear-gradient(135deg, rgba(7,55,92,0.96), rgba(18,18,24,0.98));
+  padding:18px 22px;
+  border-radius:14px;
+  border:1px solid rgba(56,189,248,0.35);
+  width:min(980px, 95%);
+  margin:22px auto;
+  box-shadow:0 0 22px rgba(0,0,0,0.45);
+  line-height:1.6;
+">
+<div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+<span style="font-size:20px;">🎯</span>
+<b style="font-size:19px; color:#BFE9FF;">Étape 2.3 — Sélection des variables pertinentes</b>
+</div>
+<p style="margin:0 0 12px 0;">
+    La sélection des variables commence par l’identification du produit correspondant à la problématique métier :
+    <b style="color:#FDE68A;">Viande de Volailles</b>. Ce sous-ensemble servira de base pour construire les indicateurs
+    utiles à l’analyse de marché.
+  </p>
+<div style="
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:12px;
+    margin:14px 0;
+  ">
+<div style="
+      padding:4px 4px;
+      border-radius:12px;
+      background:rgba(56,189,248,0.08);
+      border:1px solid rgba(56,189,248,0.28);
+    ">
+<div style="font-weight:700; color:#BFE9FF; margin-bottom:6px;">🍗 Produit ciblé</div>
+<ul style="margin:0; padding-left:18px;">
+<li>Produit identifié : <b>Viande de Volailles</b></li>
+<li>Sous-ensemble obtenu : <b>2 061</b> lignes</li>
+<li>Données disponibles sur plusieurs indicateurs FAO</li>
+</ul>
+</div>
+<div style="
+      padding:4px 4px;
+      border-radius:12px;
+      background:rgba(34,197,94,0.08);
+      border:1px solid rgba(34,197,94,0.28);
+    ">
+<div style="font-weight:700; color:#86EFAC; margin-bottom:6px;">📊 Indicateurs clés disponibles</div>
+<ul style="margin:0; padding-left:18px;">
+<li>Disponibilité alimentaire</li>
+<li>Production</li>
+<li>Importations / exportations</li>
+<li>Disponibilité intérieure</li>
+</ul>
+</div>
+</div>
+<div style="
+    margin-top:14px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(250,204,21,0.08);
+    border:1px solid rgba(250,204,21,0.30);
+  ">
+    📌 <b style="color:#FDE68A;">Lecture des données :</b><br/>
+    Les indicateurs les plus complets pour la viande de volailles concernent la disponibilité alimentaire
+    en quantité, en calories, en protéines et en matières grasses. Les indicateurs commerciaux et productifs
+    comme les importations, la production, les exportations et la disponibilité intérieure sont également disponibles.
+  </div>
+<div style="
+    margin-top:14px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(236,72,153,0.08);
+    border:1px solid rgba(236,72,153,0.26);
+  ">
+    👉 <b style="color:#F9A8D4;">En clair :</b><br/>
+    Le produit cible est bien présent dans les données. Les indicateurs disponibles permettent de construire une base
+    cohérente pour évaluer à la fois le potentiel de consommation, le niveau de production locale et la dépendance
+    potentielle aux importations.
+  </div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=710e68c9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -8362,6 +10026,359 @@ Le dataset produit ici sera ensuite utilisé dans un second notebook dédié à 
 </a>
 <span>2.4 • Justification métier des variables retenues</span>
 </h3>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a73ac71a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Première sélection d'indicateurs pertinents pour l'analyse</span>
+<span class="n">elements_retenus</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"Disponibilité alimentaire (Kcal/personne/jour)"</span><span class="p">,</span>
+    <span class="s2">"Disponibilité alimentaire en quantité (kg/personne/an)"</span><span class="p">,</span>
+    <span class="s2">"Disponibilité de protéines en quantité (g/personne/jour)"</span><span class="p">,</span>
+    <span class="s2">"Disponibilité de matière grasse en quantité (g/personne/jour)"</span><span class="p">,</span>
+    <span class="s2">"Importations - Quantité"</span><span class="p">,</span>
+    <span class="s2">"Production"</span><span class="p">,</span>
+    <span class="s2">"Exportations - Quantité"</span><span class="p">,</span>
+    <span class="s2">"Disponibilité intérieure"</span>
+<span class="p">]</span>
+
+<span class="n">elements_retenus</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>['Disponibilité alimentaire (Kcal/personne/jour)',
+ 'Disponibilité alimentaire en quantité (kg/personne/an)',
+ 'Disponibilité de protéines en quantité (g/personne/jour)',
+ 'Disponibilité de matière grasse en quantité (g/personne/jour)',
+ 'Importations - Quantité',
+ 'Production',
+ 'Exportations - Quantité',
+ 'Disponibilité intérieure']</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4b0988b2">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Vérification de la présence des indicateurs retenus dans le fichier</span>
+<span class="n">elements_existants</span> <span class="o">=</span> <span class="n">dispo</span><span class="p">[</span><span class="s2">"Élément"</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">elements_retenus</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">elements_existants</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"✅ Présent : </span><span class="si">{</span><span class="n">element</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"❌ Absent ou nom différent : </span><span class="si">{</span><span class="n">element</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>✅ Présent : Disponibilité alimentaire (Kcal/personne/jour)
+✅ Présent : Disponibilité alimentaire en quantité (kg/personne/an)
+✅ Présent : Disponibilité de protéines en quantité (g/personne/jour)
+✅ Présent : Disponibilité de matière grasse en quantité (g/personne/jour)
+✅ Présent : Importations - Quantité
+✅ Présent : Production
+✅ Présent : Exportations - Quantité
+✅ Présent : Disponibilité intérieure
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=14c54799">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Sélection des données volaille correspondant aux indicateurs retenus</span>
+<span class="n">volaille_selected</span> <span class="o">=</span> <span class="n">volaille</span><span class="p">[</span><span class="n">volaille</span><span class="p">[</span><span class="s2">"Élément"</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">elements_retenus</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Dimensions après sélection :"</span><span class="p">,</span> <span class="n">volaille_selected</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">volaille_selected</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Dimensions après sélection : (1331, 14)
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Code Domaine</th>
+<th>Domaine</th>
+<th>Code zone</th>
+<th>Zone</th>
+<th>Code Élément</th>
+<th>Élément</th>
+<th>Code Produit</th>
+<th>Produit</th>
+<th>Code année</th>
+<th>Année</th>
+<th>Unité</th>
+<th>Valeur</th>
+<th>Symbole</th>
+<th>Description du Symbole</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>651</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5511</td>
+<td>Production</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>28.00</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+<tr>
+<th>652</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5611</td>
+<td>Importations - Quantité</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>29.00</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+<tr>
+<th>654</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5301</td>
+<td>Disponibilité intérieure</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>57.00</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+<tr>
+<th>658</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>645</td>
+<td>Disponibilité alimentaire en quantité (kg/personne/an)</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>kg</td>
+<td>1.53</td>
+<td>Fc</td>
+<td>Donnée calculée</td>
+</tr>
+<tr>
+<th>659</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>664</td>
+<td>Disponibilité alimentaire (Kcal/personne/jour)</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>Kcal/personne/jour</td>
+<td>5.00</td>
+<td>Fc</td>
+<td>Donnée calculée</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=79dfb490">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="
+  font-family:Segoe UI, Arial, sans-serif;
+  font-size:16px;
+  color:#f4f4f5;
+  background:linear-gradient(135deg, rgba(7,55,92,0.96), rgba(18,18,24,0.98));
+  padding:18px 22px;
+  border-radius:14px;
+  border:1px solid rgba(56,189,248,0.35);
+  width:min(980px, 95%);
+  margin:22px auto;
+  box-shadow:0 0 22px rgba(0,0,0,0.45);
+  line-height:1.6;
+">
+<div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+<span style="font-size:20px;">🧩</span>
+<b style="font-size:19px; color:#BFE9FF;">Étape 2.4 — Justification métier des variables retenues</b>
+</div>
+<p style="margin:0 0 12px 0;">
+    Une première sélection de variables a été réalisée afin de conserver les indicateurs les plus utiles pour une
+    stratégie d’exportation de volaille. Ces variables seront ensuite nettoyées, transformées et complétées par des
+    variables dérivées.
+  </p>
+<div style="
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:12px;
+    margin:14px 0;
+  ">
+<div style="
+      padding:12px 4px;
+      border-radius:12px;
+      background:rgba(34,197,94,0.08);
+      border:1px solid rgba(34,197,94,0.28);
+    ">
+<div style="font-weight:700; color:#86EFAC; margin-bottom:6px;">🥗 Consommation et disponibilité</div>
+<ul style="margin:0; padding-left:18px;">
+<li>Disponibilité alimentaire en quantité</li>
+<li>Disponibilité alimentaire en kcal</li>
+<li>Disponibilité en protéines</li>
+<li>Disponibilité en matières grasses</li>
+</ul>
+</div>
+<div style="
+      padding:12px 4px;
+      border-radius:12px;
+      background:rgba(250,204,21,0.08);
+      border:1px solid rgba(250,204,21,0.28);
+    ">
+<div style="font-weight:700; color:#FDE68A; margin-bottom:6px;">🏭 Offre locale et commerce</div>
+<ul style="margin:0; padding-left:18px;">
+<li>Production</li>
+<li>Importations - Quantité</li>
+<li>Exportations - Quantité</li>
+<li>Disponibilité intérieure</li>
+</ul>
+</div>
+</div>
+<div style="
+    margin-top:14px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(56,189,248,0.08);
+    border:1px solid rgba(56,189,248,0.28);
+  ">
+    ✅ <b style="color:#BFE9FF;">Contrôle de présence :</b><br/>
+    Les <b>8 indicateurs sélectionnés</b> sont bien présents dans le fichier FAO. Après filtrage sur la viande de volailles
+    et les indicateurs retenus, le sous-ensemble contient <b>1 331</b> lignes.
+  </div>
+<div style="
+    margin-top:14px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(168,85,247,0.08);
+    border:1px solid rgba(168,85,247,0.28);
+  ">
+    🧠 <b style="color:#E9C7FF;">Pourquoi ces variables ?</b><br/>
+    Elles permettent de mesurer plusieurs dimensions complémentaires :
+    <ul style="margin:8px 0 0 0; padding-left:20px;">
+<li>le potentiel de consommation de volaille ;</li>
+<li>la place de la volaille dans l’alimentation ;</li>
+<li>la capacité de production locale ;</li>
+<li>la dépendance potentielle aux importations ;</li>
+<li>le profil commercial du pays sur ce produit.</li>
+</ul>
+</div>
+<div style="
+    margin-top:14px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(236,72,153,0.08);
+    border:1px solid rgba(236,72,153,0.26);
+  ">
+    👉 <b style="color:#F9A8D4;">En clair :</b><br/>
+    Cette sélection constitue une première base solide pour construire le dataset final. Les variables seront ensuite
+    pivotées par pays, croisées avec la population, puis enrichies avec des indicateurs dérivés comme le taux de dépendance
+    aux importations ou le taux d’autosuffisance.
+  </div>
 </div>
 </div>
 </div>
@@ -8445,6 +10462,768 @@ Le dataset produit ici sera ensuite utilisé dans un second notebook dédié à 
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=30c4531a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Copie de travail des datasets sources</span>
+<span class="n">dispo_clean</span> <span class="o">=</span> <span class="n">dispo</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">population_clean</span> <span class="o">=</span> <span class="n">population</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"✅ Copies de travail créées."</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>✅ Copies de travail créées.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9fa7ba8a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Vérification rapide des années disponibles</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Années disponibles dans le fichier disponibilité alimentaire :"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">dispo_clean</span><span class="p">[</span><span class="s2">"Année"</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())[:</span><span class="mi">10</span><span class="p">],</span> <span class="s2">"..."</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Années disponibles dans le fichier population :"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">population_clean</span><span class="p">[</span><span class="s2">"Année"</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())[</span><span class="o">-</span><span class="mi">10</span><span class="p">:])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Années disponibles dans le fichier disponibilité alimentaire :
+[np.int64(2017)] ...
+
+Années disponibles dans le fichier population :
+[np.int64(2009), np.int64(2010), np.int64(2011), np.int64(2012), np.int64(2013), np.int64(2014), np.int64(2015), np.int64(2016), np.int64(2017), np.int64(2018)]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=dd2472cc">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Filtrage de la population sur l'année 2017</span>
+<span class="n">population_2017</span> <span class="o">=</span> <span class="n">population_clean</span><span class="p">[</span><span class="n">population_clean</span><span class="p">[</span><span class="s2">"Année"</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2017</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Dimensions du fichier population 2017 :"</span><span class="p">,</span> <span class="n">population_2017</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">population_2017</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Dimensions du fichier population 2017 : (236, 15)
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Code Domaine</th>
+<th>Domaine</th>
+<th>Code zone</th>
+<th>Zone</th>
+<th>Code Élément</th>
+<th>Élément</th>
+<th>Code Produit</th>
+<th>Produit</th>
+<th>Code année</th>
+<th>Année</th>
+<th>Unité</th>
+<th>Valeur</th>
+<th>Symbole</th>
+<th>Description du Symbole</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>17</th>
+<td>OA</td>
+<td>Séries temporelles annuelles</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>511</td>
+<td>Population totale</td>
+<td>3010</td>
+<td>Population-Estimations</td>
+<td>2017</td>
+<td>2017</td>
+<td>1000 personnes</td>
+<td>36296.113</td>
+<td>X</td>
+<td>Sources internationales sûres</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>36</th>
+<td>OA</td>
+<td>Séries temporelles annuelles</td>
+<td>202</td>
+<td>Afrique du Sud</td>
+<td>511</td>
+<td>Population totale</td>
+<td>3010</td>
+<td>Population-Estimations</td>
+<td>2017</td>
+<td>2017</td>
+<td>1000 personnes</td>
+<td>57009.756</td>
+<td>X</td>
+<td>Sources internationales sûres</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>55</th>
+<td>OA</td>
+<td>Séries temporelles annuelles</td>
+<td>3</td>
+<td>Albanie</td>
+<td>511</td>
+<td>Population totale</td>
+<td>3010</td>
+<td>Population-Estimations</td>
+<td>2017</td>
+<td>2017</td>
+<td>1000 personnes</td>
+<td>2884.169</td>
+<td>X</td>
+<td>Sources internationales sûres</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>74</th>
+<td>OA</td>
+<td>Séries temporelles annuelles</td>
+<td>4</td>
+<td>Algérie</td>
+<td>511</td>
+<td>Population totale</td>
+<td>3010</td>
+<td>Population-Estimations</td>
+<td>2017</td>
+<td>2017</td>
+<td>1000 personnes</td>
+<td>41389.189</td>
+<td>X</td>
+<td>Sources internationales sûres</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>93</th>
+<td>OA</td>
+<td>Séries temporelles annuelles</td>
+<td>79</td>
+<td>Allemagne</td>
+<td>511</td>
+<td>Population totale</td>
+<td>3010</td>
+<td>Population-Estimations</td>
+<td>2017</td>
+<td>2017</td>
+<td>1000 personnes</td>
+<td>82658.409</td>
+<td>X</td>
+<td>Sources internationales sûres</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bf51a2c0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Vérification du type de produit retenu</span>
+<span class="n">produits_volaille</span> <span class="o">=</span> <span class="n">dispo_clean</span><span class="p">[</span>
+    <span class="n">dispo_clean</span><span class="p">[</span><span class="s2">"Produit"</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">"volaille|poulet|viande de volailles"</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">na</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="p">][</span><span class="s2">"Produit"</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+
+<span class="n">produits_volaille</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;StringArray&gt;
+['Viande de Volailles']
+Length: 1, dtype: str</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=165428d9">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Filtrage des données sur le produit "Viande de Volailles"</span>
+<span class="n">volaille</span> <span class="o">=</span> <span class="n">dispo_clean</span><span class="p">[</span><span class="n">dispo_clean</span><span class="p">[</span><span class="s2">"Produit"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"Viande de Volailles"</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Dimensions du sous-ensemble volaille :"</span><span class="p">,</span> <span class="n">volaille</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">volaille</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Dimensions du sous-ensemble volaille : (2061, 14)
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[28]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Code Domaine</th>
+<th>Domaine</th>
+<th>Code zone</th>
+<th>Zone</th>
+<th>Code Élément</th>
+<th>Élément</th>
+<th>Code Produit</th>
+<th>Produit</th>
+<th>Code année</th>
+<th>Année</th>
+<th>Unité</th>
+<th>Valeur</th>
+<th>Symbole</th>
+<th>Description du Symbole</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>651</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5511</td>
+<td>Production</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>28.0</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+<tr>
+<th>652</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5611</td>
+<td>Importations - Quantité</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>29.0</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+<tr>
+<th>653</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5072</td>
+<td>Variation de stock</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>0.0</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+<tr>
+<th>654</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5301</td>
+<td>Disponibilité intérieure</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>57.0</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+<tr>
+<th>655</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5123</td>
+<td>Pertes</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>2.0</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6b56d53e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Liste des 8 indicateurs retenus pour l'analyse</span>
+<span class="n">elements_retenus</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"Disponibilité alimentaire (Kcal/personne/jour)"</span><span class="p">,</span>
+    <span class="s2">"Disponibilité alimentaire en quantité (kg/personne/an)"</span><span class="p">,</span>
+    <span class="s2">"Disponibilité de protéines en quantité (g/personne/jour)"</span><span class="p">,</span>
+    <span class="s2">"Disponibilité de matière grasse en quantité (g/personne/jour)"</span><span class="p">,</span>
+    <span class="s2">"Importations - Quantité"</span><span class="p">,</span>
+    <span class="s2">"Production"</span><span class="p">,</span>
+    <span class="s2">"Exportations - Quantité"</span><span class="p">,</span>
+    <span class="s2">"Disponibilité intérieure"</span>
+<span class="p">]</span>
+
+<span class="n">elements_retenus</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>['Disponibilité alimentaire (Kcal/personne/jour)',
+ 'Disponibilité alimentaire en quantité (kg/personne/an)',
+ 'Disponibilité de protéines en quantité (g/personne/jour)',
+ 'Disponibilité de matière grasse en quantité (g/personne/jour)',
+ 'Importations - Quantité',
+ 'Production',
+ 'Exportations - Quantité',
+ 'Disponibilité intérieure']</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d30692f9">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Filtrage sur les 8 indicateurs retenus</span>
+<span class="n">volaille_selected</span> <span class="o">=</span> <span class="n">volaille</span><span class="p">[</span>
+    <span class="n">volaille</span><span class="p">[</span><span class="s2">"Élément"</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">elements_retenus</span><span class="p">)</span>
+<span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Dimensions après filtrage produit + indicateurs :"</span><span class="p">,</span> <span class="n">volaille_selected</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">volaille_selected</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Dimensions après filtrage produit + indicateurs : (1331, 14)
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[30]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Code Domaine</th>
+<th>Domaine</th>
+<th>Code zone</th>
+<th>Zone</th>
+<th>Code Élément</th>
+<th>Élément</th>
+<th>Code Produit</th>
+<th>Produit</th>
+<th>Code année</th>
+<th>Année</th>
+<th>Unité</th>
+<th>Valeur</th>
+<th>Symbole</th>
+<th>Description du Symbole</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>651</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5511</td>
+<td>Production</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>28.00</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+<tr>
+<th>652</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5611</td>
+<td>Importations - Quantité</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>29.00</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+<tr>
+<th>654</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>5301</td>
+<td>Disponibilité intérieure</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>Milliers de tonnes</td>
+<td>57.00</td>
+<td>S</td>
+<td>Données standardisées</td>
+</tr>
+<tr>
+<th>658</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>645</td>
+<td>Disponibilité alimentaire en quantité (kg/personne/an)</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>kg</td>
+<td>1.53</td>
+<td>Fc</td>
+<td>Donnée calculée</td>
+</tr>
+<tr>
+<th>659</th>
+<td>FBS</td>
+<td>Nouveaux Bilans Alimentaire</td>
+<td>2</td>
+<td>Afghanistan</td>
+<td>664</td>
+<td>Disponibilité alimentaire (Kcal/personne/jour)</td>
+<td>2734</td>
+<td>Viande de Volailles</td>
+<td>2017</td>
+<td>2017</td>
+<td>Kcal/personne/jour</td>
+<td>5.00</td>
+<td>Fc</td>
+<td>Donnée calculée</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5147b192">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Vérification du nombre de pays présents dans le sous-ensemble filtré</span>
+<span class="n">nb_pays_volaille</span> <span class="o">=</span> <span class="n">volaille_selected</span><span class="p">[</span><span class="s2">"Zone"</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+<span class="n">nb_pays_pop_2017</span> <span class="o">=</span> <span class="n">population_2017</span><span class="p">[</span><span class="s2">"Zone"</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Nombre de pays dans volaille_selected : </span><span class="si">{</span><span class="n">nb_pays_volaille</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Nombre de pays dans population_2017 : </span><span class="si">{</span><span class="n">nb_pays_pop_2017</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Nombre de pays dans volaille_selected : 172
+Nombre de pays dans population_2017 : 236
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=66a37daf">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="
+  font-family:Segoe UI, Arial, sans-serif;
+  font-size:16px;
+  color:#f4f4f5;
+  background:linear-gradient(135deg, rgba(88,42,7,0.96), rgba(18,18,24,0.98));
+  padding:18px 22px;
+  border-radius:14px;
+  border:1px solid rgba(251,146,60,0.35);
+  width:min(980px, 95%);
+  margin:22px auto;
+  box-shadow:0 0 22px rgba(0,0,0,0.45);
+  line-height:1.6;
+">
+<div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+<span style="font-size:20px;">🧹</span>
+<b style="font-size:19px; color:#FDBA74;">Étape 3.1 — Filtrage des indicateurs utiles</b>
+</div>
+<p style="margin:0 0 12px 0;">
+    Le périmètre de travail a été resserré afin de ne conserver que les données directement utiles à la problématique :
+    le produit <b style="color:#FDE68A;">Viande de Volailles</b>, les <b>8 indicateurs retenus</b> et la population sur l’année <b>2017</b>.
+  </p>
+<div style="
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:12px;
+    margin:14px 0;
+  ">
+<div style="
+      padding:12px 2px;
+      border-radius:12px;
+      background:rgba(34,197,94,0.08);
+      border:1px solid rgba(34,197,94,0.28);
+    ">
+<div style="font-weight:700; color:#86EFAC; margin-bottom:6px;">🍗 Sous-ensemble volaille</div>
+<ul style="margin:0; padding-left:18px;">
+<li>Produit ciblé identifié : <b>Viande de Volailles</b></li>
+<li>Sous-ensemble initial : <b>2 061</b> lignes</li>
+<li>Après filtrage sur les 8 indicateurs : <b>1 331</b> lignes</li>
+<li>Pays présents : <b>172</b></li>
+</ul>
+</div>
+<div style="
+      padding:12px 2px;
+      border-radius:12px;
+      background:rgba(56,189,248,0.08);
+      border:1px solid rgba(56,189,248,0.28);
+    ">
+<div style="font-weight:700; color:#BFE9FF; margin-bottom:6px;">🌍 Population 2017</div>
+<ul style="margin:0; padding-left:18px;">
+<li>Pays/zones présents : <b>236</b></li>
+<li>Année retenue : <b>2017</b></li>
+<li>Unité : <b>1000 personnes</b></li>
+</ul>
+</div>
+</div>
+<div style="
+    margin-top:12px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(34,197,94,0.08);
+    border:1px solid rgba(34,197,94,0.28);
+  ">
+    ✅ <b style="color:#86EFAC;">Résultat :</b><br/>
+    Le filtrage a bien recentré l’analyse sur le bon produit et les bons indicateurs. Le dataset de travail est désormais
+    plus ciblé, plus lisible et plus cohérent pour les étapes suivantes.
+  </div>
+<div style="
+    margin-top:12px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(250,204,21,0.08);
+    border:1px solid rgba(250,204,21,0.28);
+  ">
+    📌 <b style="color:#FDE68A;">Point de vigilance :</b><br/>
+    Le nombre de pays disponibles dans la population 2017 (<b>236</b>) est supérieur à celui du sous-ensemble volaille (<b>172</b>).
+    Il faudra donc vérifier plus tard quels pays sont réellement exploitables dans les deux sources.
+  </div>
+<div style="
+    margin-top:12px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(236,72,153,0.08);
+    border:1px solid rgba(236,72,153,0.26);
+  ">
+    👉 <b style="color:#F9A8D4;">En clair :</b><br/>
+    Le filtrage est réussi. À ce stade, rien ne justifie encore d’exclure des pays, mais la comparaison des périmètres
+    montre déjà qu’un futur filtre qualité sera nécessaire après la fusion.
+  </div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d3f7078d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -8480,6 +11259,249 @@ Le dataset produit ici sera ensuite utilisé dans un second notebook dédié à 
 </a>
 <span>3.2 • Traitement des doublons</span>
 </h3>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1aa1abac">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Vérification des doublons exacts dans le sous-ensemble volaille_selected</span>
+<span class="n">duplicated_volaille</span> <span class="o">=</span> <span class="n">volaille_selected</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Nombre de doublons exacts dans volaille_selected :"</span><span class="p">,</span> <span class="n">duplicated_volaille</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Nombre de doublons exacts dans volaille_selected : 0
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1a921e95">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Vérification des doublons exacts dans population_2017</span>
+<span class="n">duplicated_population</span> <span class="o">=</span> <span class="n">population_2017</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Nombre de doublons exacts dans population_2017 :"</span><span class="p">,</span> <span class="n">duplicated_population</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Nombre de doublons exacts dans population_2017 : 0
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=774e4cc0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Vérification de doublons logiques sur les clés métier</span>
+<span class="c1"># Un pays ne devrait apparaître qu'une fois par indicateur dans volaille_selected</span>
+<span class="n">doublons_logiques_volaille</span> <span class="o">=</span> <span class="n">volaille_selected</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span>
+    <span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">"Zone"</span><span class="p">,</span> <span class="s2">"Élément"</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Nombre de doublons logiques (Zone + Élément) dans volaille_selected :"</span><span class="p">,</span> <span class="n">doublons_logiques_volaille</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Nombre de doublons logiques (Zone + Élément) dans volaille_selected : 0
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e8ad6594">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Pour la population 2017, un pays devrait apparaître une seule fois</span>
+<span class="n">doublons_logiques_population</span> <span class="o">=</span> <span class="n">population_2017</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span>
+    <span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">"Zone"</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Nombre de doublons logiques (Zone) dans population_2017 :"</span><span class="p">,</span> <span class="n">doublons_logiques_population</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Nombre de doublons logiques (Zone) dans population_2017 : 0
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b119e7f6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Suppression des doublons exacts si nécessaire</span>
+<span class="n">volaille_selected</span> <span class="o">=</span> <span class="n">volaille_selected</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">population_2017</span> <span class="o">=</span> <span class="n">population_2017</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"✅ Doublons exacts supprimés si nécessaire."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Nouvelles dimensions volaille_selected :"</span><span class="p">,</span> <span class="n">volaille_selected</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Nouvelles dimensions population_2017 :"</span><span class="p">,</span> <span class="n">population_2017</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>✅ Doublons exacts supprimés si nécessaire.
+Nouvelles dimensions volaille_selected : (1331, 14)
+Nouvelles dimensions population_2017 : (236, 15)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1bcf337a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="
+  font-family:Segoe UI, Arial, sans-serif;
+  font-size:16px;
+  color:#f4f4f5;
+  background:linear-gradient(135deg, rgba(88,42,7,0.96), rgba(18,18,24,0.98));
+  padding:18px 22px;
+  border-radius:14px;
+  border:1px solid rgba(251,146,60,0.35);
+  width:min(980px, 95%);
+  margin:22px auto;
+  box-shadow:0 0 22px rgba(0,0,0,0.45);
+  line-height:1.6;
+">
+<div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+<span style="font-size:20px;">🧾</span>
+<b style="font-size:19px; color:#FDBA74;">Étape 3.2 — Traitement des doublons</b>
+</div>
+<p style="margin:0 0 12px 0;">
+    Les doublons exacts et les doublons logiques ont été vérifiés afin de s’assurer qu’un même pays ne soit pas
+    représenté plusieurs fois pour un même indicateur.
+  </p>
+<div style="
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:12px;
+    margin:14px 0;
+  ">
+<div style="
+      padding:12px 2px;
+      border-radius:12px;
+      background:rgba(34,197,94,0.08);
+      border:1px solid rgba(34,197,94,0.28);
+    ">
+<div style="font-weight:700; color:#86EFAC; margin-bottom:6px;">🍗 Volaille sélectionnée</div>
+<ul style="margin:0; padding-left:18px;">
+<li>Doublons exacts : <b>0</b></li>
+<li>Doublons logiques (Zone + Élément) : <b>0</b></li>
+</ul>
+</div>
+<div style="
+      padding:12px 2px;
+      border-radius:12px;
+      background:rgba(56,189,248,0.08);
+      border:1px solid rgba(56,189,248,0.28);
+    ">
+<div style="font-weight:700; color:#BFE9FF; margin-bottom:6px;">🌍 Population 2017</div>
+<ul style="margin:0; padding-left:18px;">
+<li>Doublons exacts : <b>0</b></li>
+<li>Doublons logiques (Zone) : <b>0</b></li>
+</ul>
+</div>
+</div>
+<div style="
+    margin-top:12px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(34,197,94,0.08);
+    border:1px solid rgba(34,197,94,0.28);
+  ">
+    ✅ <b style="color:#86EFAC;">Conclusion :</b><br/>
+    Les deux sous-ensembles sont propres sur la question des doublons. Aucune anomalie de duplication n’a été détectée,
+    ni au niveau exact, ni au niveau logique.
+  </div>
+<div style="
+    margin-top:12px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(250,204,21,0.08);
+    border:1px solid rgba(250,204,21,0.28);
+  ">
+    📌 <b style="color:#FDE68A;">Interprétation :</b><br/>
+    C’est un très bon signal qualité : les observations semblent bien structurées, ce qui limite le risque de biaiser
+    le futur dataset pays par une répétition artificielle d’informations.
+  </div>
 </div>
 </div>
 </div>
@@ -8523,6 +11545,449 @@ Le dataset produit ici sera ensuite utilisé dans un second notebook dédié à 
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=86b97009">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Vérification des types</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Types de volaille_selected :"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">volaille_selected</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Types de population_2017 :"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">population_2017</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Types de volaille_selected :
+Code Domaine                  str
+Domaine                       str
+Code zone                   int64
+Zone                          str
+Code Élément                int64
+Élément                       str
+Code Produit                int64
+Produit                       str
+Code année                  int64
+Année                       int64
+Unité                         str
+Valeur                    float64
+Symbole                       str
+Description du Symbole        str
+dtype: object
+
+Types de population_2017 :
+Code Domaine                  str
+Domaine                       str
+Code zone                   int64
+Zone                          str
+Code Élément                int64
+Élément                       str
+Code Produit                int64
+Produit                       str
+Code année                  int64
+Année                       int64
+Unité                         str
+Valeur                    float64
+Symbole                       str
+Description du Symbole        str
+Note                          str
+dtype: object
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=de7bd7d6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Conversion explicite de la colonne Valeur en numérique si nécessaire</span>
+<span class="n">volaille_selected</span><span class="p">[</span><span class="s2">"Valeur"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">volaille_selected</span><span class="p">[</span><span class="s2">"Valeur"</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s2">"coerce"</span><span class="p">)</span>
+<span class="n">population_2017</span><span class="p">[</span><span class="s2">"Valeur"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">population_2017</span><span class="p">[</span><span class="s2">"Valeur"</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s2">"coerce"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"✅ Colonnes 'Valeur' converties en numérique."</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>✅ Colonnes 'Valeur' converties en numérique.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5f8b23d4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Vérification des unités présentes dans le sous-ensemble volaille</span>
+<span class="n">volaille_selected</span><span class="p">[[</span><span class="s2">"Élément"</span><span class="p">,</span> <span class="s2">"Unité"</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">"Élément"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Élément</th>
+<th>Unité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>659</th>
+<td>Disponibilité alimentaire (Kcal/personne/jour)</td>
+<td>Kcal/personne/jour</td>
+</tr>
+<tr>
+<th>658</th>
+<td>Disponibilité alimentaire en quantité (kg/personne/an)</td>
+<td>kg</td>
+</tr>
+<tr>
+<th>661</th>
+<td>Disponibilité de matière grasse en quantité (g/personne/jour)</td>
+<td>g/personne/jour</td>
+</tr>
+<tr>
+<th>660</th>
+<td>Disponibilité de protéines en quantité (g/personne/jour)</td>
+<td>g/personne/jour</td>
+</tr>
+<tr>
+<th>654</th>
+<td>Disponibilité intérieure</td>
+<td>Milliers de tonnes</td>
+</tr>
+<tr>
+<th>1707</th>
+<td>Exportations - Quantité</td>
+<td>Milliers de tonnes</td>
+</tr>
+<tr>
+<th>652</th>
+<td>Importations - Quantité</td>
+<td>Milliers de tonnes</td>
+</tr>
+<tr>
+<th>651</th>
+<td>Production</td>
+<td>Milliers de tonnes</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f720ea50">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Vérification des unités présentes dans la population</span>
+<span class="n">population_2017</span><span class="p">[[</span><span class="s2">"Élément"</span><span class="p">,</span> <span class="s2">"Unité"</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[40]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Élément</th>
+<th>Unité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>17</th>
+<td>Population totale</td>
+<td>1000 personnes</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b1fbd503">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Vérification des années après filtrage</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Années présentes dans volaille_selected :"</span><span class="p">,</span> <span class="n">volaille_selected</span><span class="p">[</span><span class="s2">"Année"</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Années présentes dans population_2017 :"</span><span class="p">,</span> <span class="n">population_2017</span><span class="p">[</span><span class="s2">"Année"</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Années présentes dans volaille_selected : [2017]
+Années présentes dans population_2017 : [2017]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6e5ec8b1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Contrôle rapide de cohérence des valeurs numériques</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Résumé statistique — volaille_selected"</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">volaille_selected</span><span class="p">[</span><span class="s2">"Valeur"</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Résumé statistique — population_2017"</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">population_2017</span><span class="p">[</span><span class="s2">"Valeur"</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Résumé statistique — volaille_selected
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>count     1331.000000
+mean       217.998565
+std       1227.993580
+min          0.000000
+25%          4.000000
+50%         14.110000
+75%         69.000000
+max      21914.000000
+Name: Valeur, dtype: float64</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Résumé statistique — population_2017
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>count    2.360000e+02
+mean     3.198362e+04
+std      1.318949e+05
+min      7.930000e-01
+25%      3.803032e+02
+50%      5.203511e+03
+75%      1.930842e+04
+max      1.421022e+06
+Name: Valeur, dtype: float64</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8fcd0380">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="
+  font-family:Segoe UI, Arial, sans-serif;
+  font-size:16px;
+  color:#f4f4f5;
+  background:linear-gradient(135deg, rgba(88,42,7,0.96), rgba(18,18,24,0.98));
+  padding:18px 22px;
+  border-radius:14px;
+  border:1px solid rgba(251,146,60,0.35);
+  width:min(980px, 95%);
+  margin:22px auto;
+  box-shadow:0 0 22px rgba(0,0,0,0.45);
+  line-height:1.6;
+">
+<div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+<span style="font-size:20px;">📏</span>
+<b style="font-size:19px; color:#FDBA74;">Étape 3.3 — Contrôle des types et unités</b>
+</div>
+<p style="margin:0 0 12px 0;">
+    Les types de données, les unités de mesure et le périmètre temporel ont été vérifiés afin de garantir
+    la cohérence technique du jeu de données avant la fusion et la création de variables dérivées.
+  </p>
+<div style="
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:12px;
+    margin:14px 0;
+  ">
+<div style="
+      padding:12px 2px;
+      border-radius:12px;
+      background:rgba(34,197,94,0.08);
+      border:1px solid rgba(34,197,94,0.28);
+    ">
+<div style="font-weight:700; color:#86EFAC; margin-bottom:6px;">✅ Contrôles validés</div>
+<ul style="margin:0; padding-left:18px;">
+<li>Colonne <b>Valeur</b> convertie en numérique</li>
+<li>Année confirmée : <b>2017</b> dans les deux sous-ensembles</li>
+<li>Unités cohérentes par indicateur</li>
+<li>Population exprimée en <b>1000 personnes</b></li>
+</ul>
+</div>
+<div style="
+      padding:12px 2px;
+      border-radius:12px;
+      background:rgba(250,204,21,0.08);
+      border:1px solid rgba(250,204,21,0.28);
+    ">
+<div style="font-weight:700; color:#FDE68A; margin-bottom:6px;">📌 Unités relevées</div>
+<ul style="margin:0; padding-left:18px;">
+<li>Kcal/personne/jour</li>
+<li>kg/personne/an</li>
+<li>g/personne/jour</li>
+<li>Milliers de tonnes</li>
+<li>1000 personnes</li>
+</ul>
+</div>
+</div>
+<div style="
+    margin-top:12px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(34,197,94,0.08);
+    border:1px solid rgba(34,197,94,0.28);
+  ">
+    ✅ <b style="color:#86EFAC;">Conclusion :</b><br/>
+    Les unités observées sont cohérentes avec les indicateurs sélectionnés. Le périmètre temporel est bien aligné sur 2017,
+    ce qui rend la comparaison entre les sources possible.
+  </div>
+<div style="
+    margin-top:12px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(250,204,21,0.08);
+    border:1px solid rgba(250,204,21,0.28);
+  ">
+    📌 <b style="color:#FDE68A;">Point important :</b><br/>
+    La cohérence des unités est essentielle avant toute fusion ou création de variables dérivées.
+    À ce stade, rien n’indique d’erreur technique majeure sur les types ou les mesures.
+  </div>
+<div style="
+    margin-top:12px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(236,72,153,0.08);
+    border:1px solid rgba(236,72,153,0.26);
+  ">
+    👉 <b style="color:#F9A8D4;">En clair :</b><br/>
+    Cette étape est validée. Les données sont techniquement exploitables pour construire un dataset pays,
+    à condition de bien gérer ensuite les pays incomplets et les différences de couverture entre sources.
+  </div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=01e779a6">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -8558,6 +12023,360 @@ Le dataset produit ici sera ensuite utilisé dans un second notebook dédié à 
 </a>
 <span>3.4 • Gestion des valeurs manquantes</span>
 </h3>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7d85ef8f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Valeurs manquantes dans le sous-ensemble volaille_selected</span>
+<span class="n">missing_volaille</span> <span class="o">=</span> <span class="n">volaille_selected</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">missing_volaille</span><span class="p">[</span><span class="n">missing_volaille</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[43]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>Series([], dtype: int64)</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=80d5dcb8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Valeurs manquantes dans population_2017</span>
+<span class="n">missing_pop_2017</span> <span class="o">=</span> <span class="n">population_2017</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">missing_pop_2017</span><span class="p">[</span><span class="n">missing_pop_2017</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>Note    235
+dtype: int64</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c5df7863">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Vérification du nombre d'indicateurs disponibles par pays</span>
+<span class="c1"># Chaque pays devrait idéalement disposer des 8 indicateurs retenus</span>
+<span class="n">nb_indicateurs_par_pays</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">volaille_selected</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"Zone"</span><span class="p">)[</span><span class="s2">"Élément"</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">nb_indicateurs_par_pays</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[45]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>Zone
+Ouzbékistan                              4
+République démocratique populaire lao    4
+Maldives                                 6
+Djibouti                                 6
+Cambodge                                 7
+Cabo Verde                               7
+Bahamas                                  7
+Afghanistan                              7
+Guinée-Bissau                            7
+Gambie                                   7
+Guinée                                   7
+Grenade                                  7
+Haïti                                    7
+Kiribati                                 7
+Cuba                                     7
+Bangladesh                               7
+Madagascar                               7
+Mauritanie                               7
+Mozambique                               7
+Malawi                                   7
+Name: Élément, dtype: int64</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5a9d4a18">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Pays avec moins de 8 indicateurs disponibles</span>
+<span class="n">pays_incomplets</span> <span class="o">=</span> <span class="n">nb_indicateurs_par_pays</span><span class="p">[</span><span class="n">nb_indicateurs_par_pays</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">elements_retenus</span><span class="p">)]</span>
+<span class="n">pays_incomplets</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>Zone
+Ouzbékistan                              4
+République démocratique populaire lao    4
+Maldives                                 6
+Djibouti                                 6
+Cambodge                                 7
+Cabo Verde                               7
+Bahamas                                  7
+Afghanistan                              7
+Guinée-Bissau                            7
+Gambie                                   7
+Guinée                                   7
+Grenade                                  7
+Haïti                                    7
+Kiribati                                 7
+Cuba                                     7
+Bangladesh                               7
+Madagascar                               7
+Mauritanie                               7
+Mozambique                               7
+Malawi                                   7
+Nouvelle-Calédonie                       7
+Népal                                    7
+République centrafricaine                7
+Mongolie                                 7
+Mali                                     7
+Timor-Leste                              7
+Sao Tomé-et-Principe                     7
+Soudan                                   7
+République-Unie de Tanzanie              7
+Saint-Vincent-et-les Grenadines          7
+Sainte-Lucie                             7
+Burkina Faso                             7
+Tadjikistan                              7
+Zimbabwe                                 7
+Éthiopie                                 7
+Turkménistan                             7
+Vanuatu                                  7
+Name: Élément, dtype: int64</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=8e9f9eaa">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Vérification de la disponibilité de la population 2017 par pays</span>
+<span class="n">population_2017</span><span class="p">[</span><span class="s2">"Zone"</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span> <span class="n">population_2017</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>(236, (236, 15))</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b274059f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Première liste de pays potentiellement fragiles</span>
+<span class="c1"># (à surveiller)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Nombre de pays avec moins de 8 indicateurs :"</span><span class="p">,</span> <span class="n">pays_incomplets</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Nombre de pays avec moins de 8 indicateurs : 37
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e494b5e9">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># On garde pour l'instant le maximum d'information</span>
+<span class="c1"># mais on crée une liste de pays complets pour la suite</span>
+<span class="n">pays_complets</span> <span class="o">=</span> <span class="n">nb_indicateurs_par_pays</span><span class="p">[</span>
+    <span class="n">nb_indicateurs_par_pays</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">elements_retenus</span><span class="p">)</span>
+<span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Nombre de pays complets sur les 8 indicateurs :"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">pays_complets</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Nombre de pays complets sur les 8 indicateurs : 135
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=116bbb70">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="
+  font-family:Segoe UI, Arial, sans-serif;
+  font-size:16px;
+  color:#f4f4f5;
+  background:linear-gradient(135deg, rgba(88,42,7,0.96), rgba(18,18,24,0.98));
+  padding:18px 22px;
+  border-radius:14px;
+  border:1px solid rgba(251,146,60,0.35);
+  width:min(980px, 95%);
+  margin:22px auto;
+  box-shadow:0 0 22px rgba(0,0,0,0.45);
+  line-height:1.6;
+">
+<div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+<span style="font-size:20px;">🧩</span>
+<b style="font-size:19px; color:#FDBA74;">Étape 3.4 — Gestion des valeurs manquantes</b>
+</div>
+<p style="margin:0 0 12px 0;">
+    Les valeurs manquantes ont été contrôlées afin d’identifier les pays incomplets et d’anticiper les futurs filtres qualité.
+    L’objectif n’est pas encore d’exclure massivement des pays, mais de repérer les cas fragiles.
+  </p>
+<div style="
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:12px;
+    margin:14px 0;
+  ">
+<div style="
+      padding:12px 2px;
+      border-radius:12px;
+      background:rgba(34,197,94,0.08);
+      border:1px solid rgba(34,197,94,0.28);
+    ">
+<div style="font-weight:700; color:#86EFAC; margin-bottom:6px;">✅ Points rassurants</div>
+<ul style="margin:0; padding-left:18px;">
+<li><b>0</b> valeur manquante utile dans <b>volaille_selected</b></li>
+<li>La colonne <b>Note</b> de la population contient des NA, mais elle n’est pas utilisée</li>
+<li><b>135 pays</b> disposent bien des <b>8 indicateurs</b></li>
+</ul>
+</div>
+<div style="
+      padding:12px 2px;
+      border-radius:12px;
+      background:rgba(250,204,21,0.08);
+      border:1px solid rgba(250,204,21,0.28);
+    ">
+<div style="font-weight:700; color:#FDE68A; margin-bottom:6px;">⚠️ Points à surveiller</div>
+<ul style="margin:0; padding-left:18px;">
+<li><b>37 pays</b> ont moins de 8 indicateurs disponibles</li>
+<li>Certains pays n’ont que <b>4, 6 ou 7 indicateurs</b></li>
+<li>Ces pays devront être réévalués après la fusion</li>
+</ul>
+</div>
+</div>
+<div style="
+    margin-top:12px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(236,72,153,0.08);
+    border:1px solid rgba(236,72,153,0.28);
+  ">
+    📌 <b style="color:#F9A8D4;">Lecture métier :</b><br/>
+    Les données sur la volaille sont globalement propres, ce qui est un très bon signal. Le principal enjeu ne vient pas
+    de valeurs manquantes brutes, mais plutôt de la <b>complétude inégale selon les pays</b>.
+  </div>
+<div style="
+    margin-top:12px;
+    padding:12px 6px;
+    border-radius:12px;
+    background:rgba(250,204,21,0.08);
+    border:1px solid rgba(250,204,21,0.28);
+  ">
+    ⚠️ <b style="color:#FDE68A;">Décision à ce stade :</b><br/>
+    Il n’est pas nécessaire de supprimer immédiatement ces 37 pays. En revanche, ils doivent être marqués comme
+    <b>pays incomplets à surveiller</b> lors de la construction du dataset final.
+  </div>
 </div>
 </div>
 </div>
