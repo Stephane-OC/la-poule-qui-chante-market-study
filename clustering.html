@@ -14647,12 +14647,12 @@ Dimensions de la matrice de linkage : (124, 4)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [81]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Visualisation du dendrogramme complet</span>
-<span class="c1"># Ce graphique montre l'ensemble des regroupements entre les pays.</span>
-<span class="c1"># Avec 125 pays, les noms sont nombreux : il sert surtout à valider la structure globale.</span>
+<span class="c1"># Ce graphique montre l'ensemble des regroupements entre les pays</span>
+<span class="c1"># Avec 125 pays, les noms sont nombreux : il sert surtout à valider la structure globale</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">scipy.cluster.hierarchy</span><span class="w"> </span><span class="kn">import</span> <span class="n">dendrogram</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
@@ -15654,6 +15654,16 @@ Axes utilisés : ['PC1', 'PC2', 'PC3', 'PC4']
 </table>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=de564d1d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 </div>
 </div>
 </div>
@@ -19729,6 +19739,67 @@ Pays les plus attractifs du cluster 4 :
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=16270375">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="max-width:1050px; margin:30px auto; padding:22px; border:1px solid #65A30D; border-radius:12px; background:linear-gradient(135deg, rgba(22, 101, 52, 0.28), rgba(20, 83, 45, 0.18)); color:#F9FAFB; box-shadow:0 0 24px rgba(101, 163, 13, 0.22);">
+<h3 style="margin-top:0; color:#D9F99D;">🌿 Étape 8.1 • Synthèse non technique des résultats</h3>
+<p style="line-height:1.7;">
+    L’analyse a permis de transformer un ensemble de données économiques, alimentaires et commerciales en une lecture exploitable pour la prise de décision.
+    Après nettoyage et préparation des données, une ACP a été utilisée pour résumer l’information principale, puis deux méthodes de clustering ont permis
+    d’identifier plusieurs profils de pays.
+  </p>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px;">
+<div style="padding:4px; border:1px solid #22C55E; border-radius:8px; background:rgba(20, 83, 45, 0.35);">
+<strong style="color:#86EFAC;">✅ Ce que l’analyse a montré</strong>
+<ul style="line-height:1.7;">
+<li>Les pays ne présentent pas tous le même potentiel pour l’exportation de volaille</li>
+<li>Plusieurs profils de marchés ont été identifiés</li>
+<li>Certains groupes combinent demande, solvabilité et stabilité</li>
+<li>Les résultats permettent de prioriser les efforts commerciaux</li>
+</ul>
+</div>
+<div style="padding:4px; border:1px solid #38BDF8; border-radius:8px; background:rgba(15, 23, 42, 0.55);">
+<strong style="color:#BAE6FD;">📊 Méthodes utilisées</strong>
+<ul style="line-height:1.7;">
+<li>ACP pour réduire la complexité du dataset</li>
+<li>CAH pour observer les regroupements progressifs</li>
+<li>K-means pour produire une segmentation exploitable</li>
+<li>Profilage pour interpréter les clusters avec des variables métier</li>
+</ul>
+</div>
+</div>
+<div style="margin-top:14px; padding:7px; border:1px solid #F59E0B; border-radius:8px; background:rgba(120, 53, 15, 0.35);">
+<strong style="color:#FDE68A;">📌 Lecture business :</strong>
+<p style="margin-bottom:0; line-height:1.7;">
+      L’objectif n’est pas seulement de classer les pays, mais d’identifier les groupes les plus pertinents pour une stratégie d’exportation.
+      Les clusters ont donc été interprétés selon des critères concrets : dépendance aux importations, PIB par habitant, stabilité politique,
+      volumes importés et disponibilité alimentaire.
+    </p>
+</div>
+<div style="margin-top:14px; padding:7px; border:1px solid #A855F7; border-radius:8px; background:rgba(88, 28, 135, 0.30);">
+<strong style="color:#E9D5FF;">🔎 Résultat principal :</strong>
+<p style="margin-bottom:0; line-height:1.7;">
+      Deux groupes ressortent comme les plus intéressants : le <strong>cluster 2</strong>, qui apparaît comme la cible prioritaire,
+      et le <strong>cluster 4</strong>, qui constitue une cible secondaire pertinente. Les autres clusters semblent moins favorables en moyenne,
+      mais peuvent contenir certains pays intéressants à analyser individuellement.
+    </p>
+</div>
+<div style="margin-top:14px; padding:7px; border:1px solid #22C55E; border-radius:8px; background:rgba(6, 78, 59, 0.35);">
+<strong style="color:#86EFAC;">👉 En clair :</strong>
+<p style="margin-bottom:0; line-height:1.7;">
+      L’analyse recommande de concentrer la stratégie commerciale sur les marchés les plus structurés et les plus dépendants des importations,
+      tout en gardant une approche progressive et prudente selon les risques propres à chaque pays.
+    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=adca1d6f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -19763,6 +19834,73 @@ Pays les plus attractifs du cluster 4 :
 </a>
 <span>8.2 • Groupes de pays à prioriser</span>
 </h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=47563f12">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="max-width:1050px; margin:30px auto; padding:22px; border:1px solid #65A30D; border-radius:12px; background:linear-gradient(135deg, rgba(20, 83, 45, 0.30), rgba(63, 98, 18, 0.20)); color:#F9FAFB; box-shadow:0 0 24px rgba(101, 163, 13, 0.22);">
+<h3 style="margin-top:0; color:#D9F99D;">🎯 Étape 8.2 • Groupes de pays à prioriser</h3>
+<p style="line-height:1.7;">
+    À partir du score d’attractivité construit dans l’étape précédente, les clusters peuvent être hiérarchisés selon leur intérêt potentiel
+    pour une stratégie d’exportation de viande de volaille.
+  </p>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px;">
+<div style="padding:4px; border:1px solid #22C55E; border-radius:8px; background:rgba(20, 83, 45, 0.42);">
+<strong style="color:#BBF7D0;">🥇 Priorité 1 • Cluster 2</strong>
+<ul style="line-height:1.7;">
+<li>Score moyen d’attractivité le plus élevé : <strong>0,64</strong></li>
+<li>Groupe restreint mais composé de pays à fort potentiel</li>
+<li>Présence de marchés structurés comme le Japon, l’Allemagne, le Royaume-Uni ou la France</li>
+<li>Volumes d’importations importants et niveau économique favorable</li>
+</ul>
+</div>
+<div style="padding:4px; border:1px solid #84CC16; border-radius:8px; background:rgba(63, 98, 18, 0.35);">
+<strong style="color:#D9F99D;">🥈 Priorité 2 • Cluster 4</strong>
+<ul style="line-height:1.7;">
+<li>Score moyen d’attractivité positif : <strong>0,42</strong></li>
+<li>Groupe plus large, avec davantage de pays exploitables</li>
+<li>Présence de pays stables et solvables comme le Luxembourg, l’Irlande, la Suisse ou le Danemark</li>
+<li>Potentiel complémentaire au cluster prioritaire</li>
+</ul>
+</div>
+</div>
+<div style="margin-top:14px; padding:7px; border:1px solid #F59E0B; border-radius:8px; background:rgba(120, 53, 15, 0.35);">
+<strong style="color:#FDE68A;">📌 Recommandation stratégique :</strong>
+<p style="margin-bottom:0; line-height:1.7;">
+      Le <strong>cluster 2</strong> doit être considéré comme la cible principale, car il regroupe les marchés les plus attractifs en moyenne.
+      Le <strong>cluster 4</strong> peut être utilisé comme cible secondaire ou comme réserve de marchés à étudier plus finement.
+    </p>
+</div>
+<div style="margin-top:14px; padding:7px; border:1px solid #38BDF8; border-radius:8px; background:rgba(15, 23, 42, 0.55);">
+<strong style="color:#BAE6FD;">🧭 Proposition d’approche :</strong>
+<ul style="line-height:1.7; margin-bottom:0;">
+<li>Analyser en priorité les pays du cluster 2 individuellement</li>
+<li>Comparer les contraintes réglementaires, logistiques et sanitaires</li>
+<li>Identifier les pays déjà fortement importateurs de volaille</li>
+<li>Utiliser le cluster 4 comme second vivier de marchés potentiels</li>
+</ul>
+</div>
+<div style="margin-top:14px; padding:7px; border:1px solid #A855F7; border-radius:8px; background:rgba(88, 28, 135, 0.30);">
+<strong style="color:#E9D5FF;">🔎 Attention d’interprétation :</strong>
+<p style="margin-bottom:0; line-height:1.7;">
+      Un cluster attractif ne signifie pas que tous les pays du groupe doivent être ciblés immédiatement. Le clustering sert à prioriser l’analyse,
+      mais la décision finale doit se faire pays par pays, en tenant compte des contraintes réelles du marché.
+    </p>
+</div>
+<div style="margin-top:14px; padding:7px; border:1px solid #22C55E; border-radius:8px; background:rgba(6, 78, 59, 0.35);">
+<strong style="color:#86EFAC;">👉 En clair :</strong>
+<p style="margin-bottom:0; line-height:1.7;">
+      Le COMEX devrait concentrer ses efforts sur le <strong>cluster 2</strong> en priorité, puis approfondir le <strong>cluster 4</strong>
+      comme groupe complémentaire. Cette approche permet de cibler les marchés les plus prometteurs sans disperser les ressources commerciales.
+    </p>
+</div>
 </div>
 </div>
 </div>
@@ -19807,6 +19945,65 @@ Pays les plus attractifs du cluster 4 :
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=55ed13c3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="max-width:1050px; margin:30px auto; padding:22px; border:1px solid #65A30D; border-radius:12px; background:linear-gradient(135deg, rgba(22, 101, 52, 0.26), rgba(15, 23, 42, 0.45)); color:#F9FAFB; box-shadow:0 0 24px rgba(101, 163, 13, 0.22);">
+<h3 style="margin-top:0; color:#D9F99D;">⚠️ Étape 8.3 • Limites et suites à donner</h3>
+<p style="line-height:1.7;">
+    Les résultats obtenus donnent une première base solide pour prioriser les marchés, mais ils doivent être considérés comme une aide à la décision
+    et non comme une conclusion définitive. Avant toute décision opérationnelle, plusieurs points doivent être approfondis.
+  </p>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px;">
+<div style="padding:4x; border:1px solid #F59E0B; border-radius:8px; background:rgba(120, 53, 15, 0.35);">
+<strong style="color:#FDE68A;">📌 Limites de l’analyse</strong>
+<ul style="line-height:1.7;">
+<li>Les données utilisées ne couvrent pas tous les facteurs commerciaux</li>
+<li>Les contraintes réglementaires et sanitaires ne sont pas intégrées</li>
+<li>Le score d’attractivité dépend des pondérations choisies</li>
+<li>Certains pays peuvent être atypiques au sein de leur cluster</li>
+</ul>
+</div>
+<div style="padding:4px; border:1px solid #38BDF8; border-radius:8px; background:rgba(15, 23, 42, 0.55);">
+<strong style="color:#BAE6FD;">🔎 Analyses complémentaires</strong>
+<ul style="line-height:1.7;">
+<li>Étudier les droits de douane et barrières à l’entrée</li>
+<li>Analyser les normes sanitaires et vétérinaires</li>
+<li>Comparer les coûts logistiques et distances d’exportation</li>
+<li>Évaluer la concurrence locale et internationale</li>
+</ul>
+</div>
+</div>
+<div style="margin-top:14px; padding:7px; border:1px solid #A855F7; border-radius:8px; background:rgba(88, 28, 135, 0.30);">
+<strong style="color:#E9D5FF;">🧭 Suite recommandée :</strong>
+<p style="margin-bottom:0; line-height:1.7;">
+      La prochaine étape consiste à réaliser une analyse pays par pays sur les marchés prioritaires. Les pays du cluster 2 doivent être étudiés en premier,
+      puis ceux du cluster 4. Cette analyse devra croiser les résultats statistiques avec des informations opérationnelles : réglementation,
+      logistique, partenaires commerciaux, prix, demande locale et concurrence.
+    </p>
+</div>
+<div style="margin-top:14px; padding:7px; border:1px solid #F472B6; border-radius:8px; background:rgba(131, 24, 67, 0.28);">
+<strong style="color:#FBCFE8;">🚦 Point de vigilance :</strong>
+<p style="margin-bottom:0; line-height:1.7;">
+      Le classement des clusters donne une direction stratégique, mais il ne remplace pas une étude de marché détaillée. Un pays bien classé peut présenter
+      des obstacles réglementaires ou logistiques importants, tandis qu’un pays moins bien classé peut offrir une opportunité de niche.
+    </p>
+</div>
+<div style="margin-top:14px; padding:7px; border:1px solid #22C55E; border-radius:8px; background:rgba(6, 78, 59, 0.35);">
+<strong style="color:#86EFAC;">👉 En clair :</strong>
+<p style="margin-bottom:0; line-height:1.7;">
+      L’analyse permet de prioriser les marchés à étudier, mais la recommandation finale devra être confirmée par une analyse opérationnelle plus fine.
+      Le cluster 2 constitue la priorité, le cluster 4 une cible secondaire, et les autres groupes peuvent être explorés uniquement en cas d’opportunités spécifiques.
+    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c94a43b8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -19840,8 +20037,55 @@ Pays les plus attractifs du cluster 4 :
       "/>
 </a>
 <span style="color:#67E8F9;">✅ Conclusion</span>
-<span>• Synthèse du notebook 2</span>
+<span>• Synthèse finale et recommandation COMEX</span>
 </h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cf43f607">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="max-width:1050px; margin:36px auto; padding:24px; border:1px solid #84CC16; border-radius:14px; background:linear-gradient(135deg, rgba(63, 98, 18, 0.35), rgba(20, 83, 45, 0.25)); color:#F9FAFB; box-shadow:0 0 28px rgba(132, 204, 22, 0.25);">
+<h3 style="margin-top:0; color:#D9F99D;">✅ Synthèse finale • Recommandation COMEX</h3>
+<p style="line-height:1.7;">
+    L’analyse statistique a permis d’identifier plusieurs profils de pays à partir d’indicateurs alimentaires, économiques, commerciaux et politiques.
+    La combinaison de l’ACP, de la CAH, du K-means et du profilage des clusters permet de proposer une recommandation lisible pour le COMEX.
+  </p>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px;">
+<div style="padding:4px; border:1px solid #22C55E; border-radius:8px; background:rgba(20, 83, 45, 0.42);">
+<strong style="color:#BBF7D0;">🥇 Cible prioritaire</strong>
+<p style="line-height:1.7; margin-bottom:0;">
+        Le <strong>cluster 2</strong> ressort comme le groupe le plus attractif. Il combine des pays économiquement solides,
+        avec des volumes d’importations importants et une capacité de marché intéressante.
+      </p>
+</div>
+<div style="padding:4px; border:1px solid #84CC16; border-radius:8px; background:rgba(63, 98, 18, 0.35);">
+<strong style="color:#D9F99D;">🥈 Cible secondaire</strong>
+<p style="line-height:1.7; margin-bottom:0;">
+        Le <strong>cluster 4</strong> constitue une cible complémentaire pertinente. Il regroupe davantage de pays et présente
+        plusieurs indicateurs favorables, notamment sur la stabilité et le niveau économique.
+      </p>
+</div>
+</div>
+<div style="margin-top:14px; padding:7px; border:1px solid #F59E0B; border-radius:8px; background:rgba(120, 53, 15, 0.35);">
+<strong style="color:#FDE68A;">📌 Recommandation :</strong>
+<p style="margin-bottom:0; line-height:1.7;">
+      Le COMEX peut utiliser cette segmentation pour orienter les prochaines études de marché. La priorité doit être donnée aux pays du cluster 2,
+      puis aux pays du cluster 4, en réalisant une analyse complémentaire des contraintes réglementaires, logistiques et concurrentielles.
+    </p>
+</div>
+<div style="margin-top:14px; padding:7px; border:1px solid #22C55E; border-radius:8px; background:rgba(6, 78, 59, 0.35);">
+<strong style="color:#86EFAC;">👉 En clair :</strong>
+<p style="margin-bottom:0; line-height:1.7;">
+      Les résultats ne donnent pas une décision automatique, mais une base de priorisation claire :
+      <strong>cluster 2 en priorité</strong>, <strong>cluster 4 en second niveau</strong>, puis analyse détaillée pays par pays avant toute décision commerciale.
+    </p>
+</div>
 </div>
 </div>
 </div>
